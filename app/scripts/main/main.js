@@ -33,14 +33,7 @@ angular.module('realeyesAppApp')
         $scope.calcCurrency = function(val, rate1, rate2) {
             return val / rate1 * rate2;
         };
-        // $scope.change = function() {
-        //     $scope.firstVal = $scope.calcCurrency($scope.firstCurrency.rate, $scope.seccondCurrency.rate)
-        //     $scope.seccondVal = 1;
-        // };
-        // $scope.changeSec = function() {
-        //     $scope.seccondVal = $scope.calcCurrency($scope.seccondCurrency.rate, $scope.firstCurrency.rate)
-        //     $scope.firstVal = 1;
-        // };
+
         $scope.calcClick = function() {
             $scope.result = $scope.calcCurrency($scope.val, $scope.firstCurrency.rate, $scope.seccondCurrency.rate)
 

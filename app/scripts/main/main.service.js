@@ -22,15 +22,16 @@
         service.getHistoryByIndex = function(index) {
             return $http.get('https://cryptic-sea-20456.herokuapp.com/cure')
                 .then(function(data) {
-                    var result = [];
+                    var result = []
+                    result[0] = ["Day", " Currency"];
 
                     data.data.forEach((element) => {
-                        var obj = {}
-                        obj.label = element.$.time;
-                        obj.value = parseFloat(element.Cube[index].$.rate).toFixed(2);
+                        var obj = []
+                        obj[0] = element.$.time;
+                        obj[1] = parseFloat(element.Cube[index].$.rate);
                         result.push(obj)
                     });
-                    return result.slice(0, 13);;
+                    return result //.slice(0, 7);;
                 });
         };
         return service;
