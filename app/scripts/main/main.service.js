@@ -13,9 +13,24 @@
                 .then(function(data) {
                     data.data[0].Cube.forEach((element, index, arr) => {
                         arr[index] = element.$;
-                        arr[index].rate = parseFloat(arr[index].rate)
+                        arr[index].rate = parseFloat(arr[index].rate).toFixed(2)
                     });
                     return data.data[0].Cube;
+                });
+        };
+
+        service.getHistoryByIndex = function(index) {
+            return $http.get('https://cryptic-sea-20456.herokuapp.com/cure')
+                .then(function(data) {
+                    var result = [];
+
+                    data.data.forEach((element) => {
+                        var obj = {}
+                        obj.label = element.$.time;
+                        obj.value = parseFloat(element.Cube[index].$.rate).toFixed(2);
+                        result.push(obj)
+                    });
+                    return result.slice(0, 13);;
                 });
         };
         return service;

@@ -15,7 +15,8 @@ angular
         'ngResource',
         'ngRoute',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        "ng-fusioncharts"
     ])
     .config(function($routeProvider) {
         $routeProvider
@@ -23,6 +24,11 @@ angular
                 templateUrl: 'main.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
+            })
+            .when('/history', {
+                templateUrl: 'history.html',
+                controller: 'historyCtrl',
+                controllerAs: 'history'
             })
             .otherwise({
                 redirectTo: '/'

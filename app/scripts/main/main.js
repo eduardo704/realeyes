@@ -42,8 +42,8 @@ angular.module('realeyesAppApp')
         //     $scope.firstVal = 1;
         // };
         $scope.calcClick = function() {
-            var a = $scope.calcCurrency($scope.val, $scope.firstCurrency.rate, $scope.seccondCurrency.rate)
-            $scope.result = a.toFixed(2);
+            $scope.result = $scope.calcCurrency($scope.val, $scope.firstCurrency.rate, $scope.seccondCurrency.rate)
+
         };
 
         $scope.change = function() {
