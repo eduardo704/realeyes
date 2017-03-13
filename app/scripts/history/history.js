@@ -31,7 +31,7 @@ angular.module('realeyesAppApp')
         function drawBasic(aaa) {
             var data = google.visualization.arrayToDataTable(aaa);
             var options = {
-                title: 'Company Performance',
+                title: 'Currency Performance',
                 curveType: 'function',
                 legend: { position: 'bottom' }
             };
