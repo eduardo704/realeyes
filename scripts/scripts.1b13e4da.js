@@ -26,7 +26,7 @@ angular
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .when('/history', {
+            .when('realeyes/#!/history', {
                 templateUrl: 'history.html',
                 controller: 'historyCtrl',
                 controllerAs: 'history'
