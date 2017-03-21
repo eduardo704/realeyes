@@ -19,16 +19,14 @@ angular
         "googlechart"
         //   "chart.js"
     ])
-    .config(function($routeProvider,$locationProvider ) {
-     $locationProvider.html5Mode(true);
-    var baseUrl='/realeyes/';
+    .config(function($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl: 'main.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .when(baseUrl+'/history', {
+            .when('/history', {
                 templateUrl: 'history.html',
                 controller: 'historyCtrl',
                 controllerAs: 'history'
