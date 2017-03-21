@@ -21,7 +21,7 @@ angular
     ])
     .config(function($routeProvider) {
         $routeProvider
-            .when('/', {
+            .when('/realeyes/#!/', {
                 templateUrl: 'main.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
