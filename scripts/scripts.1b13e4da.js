@@ -21,12 +21,12 @@ angular
     ])
     .config(function($routeProvider) {
         $routeProvider
-            .when('/realeyes/#!/', {
+            .when('/', {
                 templateUrl: 'main.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .when('realeyes/#!/history', {
+            .when('/history', {
                 templateUrl: 'history.html',
                 controller: 'historyCtrl',
                 controllerAs: 'history'
