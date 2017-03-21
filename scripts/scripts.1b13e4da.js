@@ -20,14 +20,15 @@ angular
         //   "chart.js"
     ])
     .config(function($routeProvider,$locationProvider ) {
-     $locationProvider.html5Mode(true)
+     $locationProvider.html5Mode(true);
+    var baseUrl='/realeyes/';
         $routeProvider
             .when('/', {
                 templateUrl: 'main.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .when('/history', {
+            .when(baseUrl+'/history', {
                 templateUrl: 'history.html',
                 controller: 'historyCtrl',
                 controllerAs: 'history'
