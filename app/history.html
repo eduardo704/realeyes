@@ -4,7 +4,7 @@
             <fieldset>
                 <div class="form-group">
                     <label for="firstSelect" class="col-lg-2 control-label">From:</label>
-                    <div class="col-lg-10">
+                    <div class="col-lg-10" ng-class="{hidden: enable}">
                         <select name="firstSelect" class="form-control" id="firstSelect" ng-change="change()" ng-model="firstCurrency">
                     <option ng-repeat="cur in currencies" ng-value="cur">{{cur.currency}}</option>
                      </select>
